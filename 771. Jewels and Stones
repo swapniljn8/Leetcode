@@ -1,0 +1,23 @@
+class Solution {
+    public int numJewelsInStones(String J, String S) {
+        if(J.equals(null) || J.equals(" ")|| S.equals(null)|| S.equals(" "))
+            return 0;
+        int count = 0;
+        int prev = 0;
+        char J_array[] = J.toCharArray();
+        char S_array[] = S.toCharArray();
+        Arrays.sort(J_array);
+        Arrays.sort(S_array);
+        for(int i = 0; i < J_array.length; ++i) {
+            for(int j = prev; j < S_array.length; ++j) {
+                if(J_array[i] == S_array[j])
+                    ++count;
+                else if((int) J_array[i] < (int) S_array[j]){
+                    prev = j;
+                    break;
+                }
+            }
+        }
+        return count;
+    }
+}
