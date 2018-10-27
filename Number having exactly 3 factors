@@ -1,1 +1,36 @@
 
+// "static void main" must be defined in a public class.
+//Find if a given number has exactly three factors
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+public class Main {
+    public void factors(int num) {
+        boolean flag = true;
+        double fsqr = Math.sqrt(num);
+        int sqr = (int) fsqr;
+        if((sqr - fsqr) == 0) {
+        for(int i = 2; i < sqr; ++i) {
+            if(num % i == 0)
+                flag = false;
+                break;
+        }
+        if(flag == false)
+            System.out.println("false");
+        else 
+            System.out.println("true");
+    }
+        else {
+            System.out.print("false");
+        }
+    }
+    public static void main(String[] args) {
+        try {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(br.readLine());
+        Main obj = new Main();
+        obj.factors(a);
+        }
+        catch(Exception e) {}
+    }
+}
