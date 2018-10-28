@@ -1,0 +1,37 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+public class Main {
+    public void arm(int num) {
+        int rem = 0;
+        int n = num;
+        int size = 0;
+        int number = 0;
+        List<Integer> li = new ArrayList<Integer>();
+        while(n != 0) {
+                rem = n % 10;
+                li.add(rem);
+                n = n / 10;
+                ++size;
+        }
+        
+        for(Integer g : li) {
+            number = number + (int)Math.pow(g, size); 
+        }
+        if(number == num){
+            System.out.println("True");
+        }
+        else {
+            System.out.println("False");
+        }
+    }
+    public static void main(String[] args) {
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            int a = Integer.parseInt(br.readLine());
+            Main obj = new Main();
+            obj.arm(a);
+        }
+        catch(Exception e) {}
+    }
+}
