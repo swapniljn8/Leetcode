@@ -1,10 +1,15 @@
 public static boolean isPrime(int num){
+    int top = Math.sqrt(num);
     if ( num > 2 && num%2 == 0 ) {
         System.out.println(num + " is not prime");
         return false;
     }
-    int top = (int)Math.sqrt(num) + 1;
-    for(int i = 3; i < top; i+=2){
+    else if((top - (int)top) == 0) {
+        return false;
+    }
+    else {
+        int a = (int) top + 1;
+    for(int i = 3; i <= a; i+=2){
         if(num % i == 0){
             System.out.println(num + " is not prime");
             return false;
