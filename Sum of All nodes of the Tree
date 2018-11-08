@@ -1,0 +1,83 @@
+
+/* Java implementation to find minimum depth 
+   of a given Binary tree */
+  
+/* Class containing left and right child of current 
+node and key value*/
+class Node 
+{ 
+    int data; 
+    Node left, right; 
+    public Node(int item) 
+    { 
+        data = item; 
+        left = right = null; 
+    } 
+} 
+public class BinaryTree 
+{ 
+    int sum = 0;
+    //Root of the Binary Tree 
+    Node root; 
+  
+    int maximumDepth() 
+    { 
+        return maximumDepth(root); 
+    } 
+  
+    /* Function to calculate the minimum depth of the tree */
+    int maximumDepth(Node root) 
+    { 
+        // Corner case. Should never be hit unless the code is 
+        // called on root = NULL 
+        if (root == null) 
+            return 0; 
+        else {
+        // Base case : Leaf Node. This accounts for height = 1. 
+        if (root.left == null && root.right == null) {
+            sum   = sum + root.data;
+            return sum; 
+        }
+  
+        // If left subtree is NULL, recur for right subtree 
+        else if (root.left == null) {
+            sum = sum + root.data;
+            return maximumDepth(root.right);
+        }
+  
+        // If right subtree is NULL, recur for left subtree 
+        else if (root.right == null)  {
+            sum = sum + root.data;
+            return maximumDepth(root.left);   
+        }
+        
+        else {
+        sum = Math.max(maximumDepth(root.left), maximumDepth(root.right))+root.data;            return sum;
+        }
+        //return sum;
+  /*
+        return Math.max(maximumDepth(root.left), 
+                        maximumDepth(root.right)) + 1; */
+    } 
+    }
+  
+    /* Driver program to test above functions */
+    public static void main(String args[]) 
+    { 
+        BinaryTree tree = new BinaryTree(); 
+        tree.root = new Node(1); 
+        tree.root.left = new Node(2); 
+        tree.root.right = new Node(3); 
+        tree.root.left.left = new Node(4); 
+        tree.root.left.right = new Node(5); 
+        tree.root.left.right.left = new Node(6); 
+        tree.root.left.right.right = new Node(7); 
+        tree.root.left.right.right.left = new Node(8); 
+        tree.root.left.right.right.left.left = new Node(9); 
+        
+        
+  
+        System.out.println("The minimum depth of "+ 
+          "binary tree is : " + tree.maximumDepth()); 
+    } 
+} 
