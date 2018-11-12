@@ -1,0 +1,44 @@
+import java.util.*;
+import java.io.*;
+
+class Node {
+    int data;
+    Node left;
+    Node right;
+     public Node(int data) {
+         this.data = data;
+         Node left = null;
+         Node right = null;
+     }
+}
+ public class GFG {
+     static int max = 0;
+     public int maxElement(Node root) {
+         if(max < root.data){
+             max = root.data;
+         }
+         if(root.right != null) {
+             maxElement(root.right);
+         }
+         if(root.left != null) {
+             maxElement(root.left);
+         }
+         return max;
+     }
+     public static void main (String[] args) {
+         Node root = new Node(65);
+         root.left = new Node(54);
+         root.right = new Node(3);
+         root.left.left = new Node(0);
+         root.left.right = new Node(68);
+         root.right.left = new Node(321321);
+         root.right.right = new Node(8);
+         root.right.right.left = new Node(12);
+         root.right.right.right = new Node(12000000);
+         
+         GFG obj = new GFG();
+         max = root.data;
+         System.out.println(obj.maxElement(root));
+     }
+     
+ }
