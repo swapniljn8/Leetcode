@@ -1,0 +1,33 @@
+import java.util.*;
+import java.io.*;
+class Node {
+   int data;
+   Node right;
+   Node left;
+   public Node(int data) {
+      this.data = data;
+      Node left = null;
+      Node right = null;
+   }
+}
+public class Depth {
+static int sum = -1;//because the root node will be the 0th depth.
+public static int maxDepth(Node root, int sum){
+		if (root==null)return sum;
+		else return Math.min(maxDepth(root.left, sum + 1), maxDepth(root.right, sum + 1));
+	}   
+//   return sum;
+
+   public static void main(String args[]) {
+      //Depth obj = new Depth();
+      Node root = new Node(1);
+      root.left = new Node(2);
+      root.right = new Node(3);
+      root.left.left = new Node(4);
+      root.left.right = new Node(5);      
+      //root.right.left = new Node(6);
+      //root.right.right = new Node(7);
+      root.left.left.left = new Node(8);
+      System.out.println(maxDepth(root, sum));   
+   }
+   }
