@@ -1,0 +1,15 @@
+import math
+def sqr(number):
+    num = int(number)
+    half = int(num / 2)
+    halfsqrt = int(math.floor(math.sqrt(half))) 
+    sqrtnum = int(math.floor(math.sqrt(num)))
+    #half = int(math.floor(sqrtnum / 2))
+    for i in range(halfsqrt, 1, -1) :
+        for j in range(halfsqrt+1, sqrtnum+1, 1) :
+            if i*i + j*j == num :
+                print(i, j)
+                return "true"
+                
+    return "false"
+print(sqr(input()))    
