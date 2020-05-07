@@ -1,6 +1,8 @@
 # Leetcode
 Java Solutions of Leetcode problems
-<b>The link does not Open in new page so click either the Scroller of mouse or right click and then open link in new page <b/>
+<br/>
+<b>|| The link doesn't Open in new tab so either click  the Scroller of mouse or right click and then open link in new page|| <b/>
+  <br/>
 <a href = "https://github.com/swapniljn8/Leetcode/blob/master/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.java" target="_blank">121. Best Time to Buy and Sell Stock.java</a> <br/>
 <a href = "https://github.com/swapniljn8/Leetcode/blob/master/122.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II" target="_blank">122. Best Time to Buy and Sell Stock II</a> <br/>
 <a href = "https://github.com/swapniljn8/Leetcode/blob/master/152.%20Maximum%20Product%20Subarray" target="_blank">152. Maximum Product Subarray</a> <br/>
