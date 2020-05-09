@@ -25,3 +25,5 @@ Java Solutions of Leetcode problems
 <a href = "https://github.com/swapniljn8/Leetcode/blob/master/Plus%20One" target="_blank">Plus One</a> <br/>
 <a href = "https://github.com/swapniljn8/Leetcode/blob/master/Speculating%20on%20buffalos" target = "_blank">Speculating on buffalos</a> <br/>
 <a href = "https://github.com/swapniljn8/Leetcode/blob/master/Sum%20of%20All%20nodes%20of%20the%20Tree" target="_blank">Sum of All nodes of the Tree</a> <br/>
+<a href = "https://github.com/swapniljn8/Leetcode/blob/master/1232.Check%20If%20It%20Is%20A%20Staight%20Line" target="_blank">1232. Check If It Is a Straight Line</a> <br/>
+
